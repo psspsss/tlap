@@ -58,3 +58,66 @@ int main() {
     
     return 0;
 }
+
+
+
+
+
+/*
+    
+#include <iostream>
+using namespace std;
+int main() {
+    int number;
+    int positive=0;
+    int negative=0;
+
+    for(int i=1; i<=10;i++){
+        cin>>number;
+        if(number>0) positive++;
+        if(number<0) negative++;
+    }
+    
+    int response;
+    cout<<"Press 1 to get Positive count or Press 0 to get Negative count";
+    cin >>response;
+    if(response == 1){cout << positive <<endl;}
+    if(response == 0){cout << negative <<endl;}
+
+    return 0;
+}
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    
+// int doubleDigitValue(int digit){
+    
+//     int doubleDigit=digit*2;
+//     int sum;
+//     if(doubleDigit>=10){
+//         sum = 1 + doubleDigit%10;
+//     } else sum = doubleDigit;
+//     return sum;
+// }
+
+char digit;
+cout << "Enter a one-digit number: ";
+cin >> digit;
+int sum = digit - '0';
+cout << "Is the sum of digits " << sum << "? \n";
+// char NaDigit;
+// NaDigit = cin.get();
+// int sum = NaDigit;
+// cout << sum;
+
+    return 0;
+}
+
+
+
+
+
+
+*/
