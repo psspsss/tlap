@@ -125,14 +125,15 @@ while((digiCar !=10)&&( digiCar != ',')){
 } cout<<"number is: " <<number<<endl;
 } while (digiCar!=10);
 
-char inputDig = cin.get();
-int number = (inputDig - '0');
+// char inputDig = cin.get();
+// int number = (inputDig - '0');
 
-inputDig = cin.get();
-while(inputDig !=10){
-    number = number *10 + (inputDig - '0');
-    inputDig = cin.get();
-}
+// inputDig = cin.get();
+// while(inputDig !=10){
+//     number = number *10 + (inputDig - '0');
+//     inputDig = cin.get();
+// }
+
 
 return 0;
 
