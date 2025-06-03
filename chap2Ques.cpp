@@ -36,7 +36,6 @@ using namespace std;
 
 int main(){
 
-
     for(int n=0; n<4;n++){
 
             int numstars = 2* (n+1); 
@@ -69,7 +68,7 @@ int main(){
 
 
 
-    // Top half
+
     for (int row = 1; row <= 4; row++)
     {
         for (int space = 1; space <= (row - 1); space++)
@@ -94,7 +93,6 @@ int main(){
         std::cout << '\n';
     }
 
-    // Bottom half
     for (int row = 1; row <= 4; row++)
     {
         for (int space = 1; space <= (4 - row); space++)
