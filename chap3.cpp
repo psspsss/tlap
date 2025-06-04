@@ -24,7 +24,8 @@ int main(){
     int intArray[arraySize] = {4, 5, 9, 12, -4, 0, -57, 30987, -287, 1};
     int targetValue = 12;
     int positionValue =0;
-    while((intArray[positionValue]!=targetValue) && (positionValue < arraySize))
+    while((intArray[positionValue]!=targetValue) &&         
+     (positionValue < arraySize))
     positionValue++;
 
 
@@ -41,6 +42,46 @@ int main(){
         highestval = intarray[i];
     }
 
+    // qsort 
+    int compareFunc(const void * voidA, const void * voidB)
+    {
+        int * intA = (int *)(voidA);
+        int * intB = (int *)(voidB);
+        return *intA - *intB;
+    };
 
+    const int sizeofArray = 10;
+    int intARRAY[sizeofArray] = {87, 28, 100, 78, 84, 98, 75, 70, 81, 68};
+    qsort(intARRAY, sizeofArray, sizeof(int), compareFunc); //qsort(array to be sorted, sizeofarray, size of one element, comparator function)
+
+    // insertion sort
+
+    int start = 0; //first element
+    int end = sizeofArray -1;   //last element
+    for(int i = start+1; i <= end; i++){    //outerloop - selects the next card to be selected in th everincreasing sorted hand
+        for(int j =i; j > start && intARRAY[j-1] > intARRAY[j];j--){ //innerloop - puts current value in correct position by swapping the value with its predecessor(j-1) until it reaches correct location.
+            int temp = intARRAY[j-1];
+            intARRAY[j-1] = intARRAY[j];
+            intARRAY[j]= temp;
+        }
+    }
+
+    // compute statistics
+
+    const int arraySizE= 10;
+    int gradeArray[arraySizE]= {87, 76, 100, 97, 64, 83, 88, 92, 74, 95};
+    double sum =0;
+    for(int i=0; i<arraySizE;i++){
+        sum += gradeArray[i];
+    }
+    double average = sum/arraySizE;
+
+    // vendor payment valdiation
+
+    const int ArrAySize = 10;
+    int negativePayments=0;
+    for(int i=0; i<ArrAySize;i++){
+        if(vendorPayments[i]<0) negativePayments++;
+    }
     return 0;
 }
