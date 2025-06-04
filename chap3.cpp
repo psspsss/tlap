@@ -83,5 +83,6 @@ int main(){
     for(int i=0; i<ArrAySize;i++){
         if(vendorPayments[i]<0) negativePayments++;
     }
+
     return 0;
 }
